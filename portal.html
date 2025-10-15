@@ -16,6 +16,13 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="about.css">
+    
     <style>
         body {
             margin: 0;
@@ -26,12 +33,12 @@
         
         /* Hero Section */
         .hero-section {
+            background: linear-gradient(rgba(51, 51, 51, 0.71), rgba(51, 51, 51, 0.71)), 
+                        url('images/nav-image.png') center/cover;
+            min-height: 400px;
+            display: flex;
+            align-items: flex-end;
             position: relative;
-            height: 400px;
-            background-image: url('https://s3-alpha-sig.figma.com/img/6265/5dd5/84c7b99090c714d30a2ce47e52eac257?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mRgCz36ZvEEWTJhRrV-zB9l-A3JpBHsUMf~aaJ0W0EhFdAMsWSbOyM6kTqKK9eDfALDgcFvKpKBPqo7TchJT2v5B5T8mP1YwFPyPQIVpfXgHdGQ8k3-jLDLz5XZ6oW3i0RCqdH0vLDQzJRfxSjqLhYQ8Gu6xnp-c~kzqhqCFSHBxO~rYqXbkGN6Qi-wF0yJWrJKDMsGRJhf5lNZdcB~Tr6IjKmn6g7wKfn4XJe7dK9L8JkrOzYuCCqJpTiH~oNe0hGpkNHf9pDdJf~tVRJhxNpBQXqFPYJfRbg3L0qN8xJhWYT7oLdF2BjhJ3pXq3xN6wL8qGbr9fXJ4p7kJQA__');
-            background-size: cover;
-            background-position: center;
-            margin-bottom: 50px;
         }
         
         .hero-overlay {
@@ -290,114 +297,7 @@
             .breadcrumb-custom { font-size: 14px; }
         }
         
-        /* Footer */
-        .footer {
-            background-color: #001f3f;
-            color: white;
-            padding: 50px 0 30px;
-            margin-top: 100px;
-        }
-        
-        .footer-content {
-            max-width: 1240px;
-            margin: 0 auto;
-            padding: 0 100px;
-        }
-        
-        .footer-column h5 {
-            font-size: 20px;
-            font-weight: 600;
-            margin-bottom: 25px;
-        }
-        
-        .footer-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .footer-list li {
-            margin-bottom: 20px;
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-        }
-        
-        .footer-list li::before {
-            content: '';
-            width: 0;
-            height: 0;
-            border-left: 6px solid #017D01;
-            border-top: 4px solid transparent;
-            border-bottom: 4px solid transparent;
-            margin-top: 6px;
-            flex-shrink: 0;
-        }
-        
-        .footer-list li a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        
-        .footer-list li a:hover {
-            text-decoration: underline;
-        }
-        
-        .footer-divider {
-            border: 0;
-            border-top: 1px solid rgba(51, 51, 51, 0.5);
-            margin: 42px 0;
-        }
-        
-        .footer-bottom {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            font-size: 12px;
-            position: relative;
-        }
-        
-        .footer-links {
-            display: flex;
-            gap: 15px;
-            align-items: center;
-        }
-        
-        .footer-links a {
-            color: white;
-            text-decoration: none;
-            font-size: 16px;
-        }
-        
-        .footer-links .divider {
-            width: 1px;
-            height: 20px;
-            background-color: white;
-        }
-        
-        .social-icons {
-            display: flex;
-            gap: 10px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-        
-        .social-icon {
-            width: 30px;
-            height: 30px;
-            background-color: white;
-            border-radius: 5px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-        }
-        
-        .social-icon i {
-            color: #00804C;
-            font-size: 14px;
-        }
+        /* Footer styles are inherited from About page / Bootstrap */
         
         @media (max-width: 1200px) {
             .navbar-custom {
@@ -442,61 +342,49 @@
 </head>
 <body>
     <!-- Hero Section -->
-    <div class="hero-section">
+    <section class="hero-section position-relative">
         <div class="hero-overlay"></div>
         
-        <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg navbar-custom">
-            <div class="container-fluid p-0">
+        <!-- Navbar (matching About page) -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-pill position-absolute mx-auto" style="top: 50px; left: 100px; right: 100px; max-width: 1240px; z-index: 10;">
+            <div class="container-fluid px-4 py-2">
                 <a class="navbar-brand" href="#">
-                    <img src="https://s3-alpha-sig.figma.com/img/9cd3/4f5e/d79e4d196e602476320ec4cb9546408a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SwqJCi3iD6hXhCEbB0~4B1FrX4t8bZZoBR1NyXpgMl7vLqNJF~pXQH7K0uYwqVjQHJqYLqR8d4Jf0WTqKGJqd3hFfRn8YlJt3BqL1pYFYqJhN0D5bQfP7pWqXJe0Y8JFqGd5NvYqP0rYvWGfJqP5pKfGqF7JGqJ9fQJ7pY5vLqRY0pYqJfW8pK5YpJfYpJqP5LpYfJqY5pYJqP0YqJfYpJqYpJqY5pYJqYpJfYqJfYqJfYpYqJfYqJfYqJfYqJqYpJqYpJqYqJqYpJqYqJqYpJqYqJqYpJqYqJqYpJqYqJqY__" alt="Logo" class="navbar-logo">
+                    <img src="images/educator-book-and-laptop-in-form-of-a-lo_RJC9ZlgSSvSP1fHwtzhhfw_etmMTLOrS7i9Vn0BUXDNsA-removebg-preview 1.png" alt="Logo" height="44">
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav mx-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="mentor.html">Our Mentors</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Blog</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="courseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Course</a>
+                            <ul class="dropdown-menu" aria-labelledby="courseDropdown">
+                                <li><a class="dropdown-item" href="courses.html">All Courses</a></li>
+                                <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                                <li><a class="dropdown-item" href="#">Business</a></li>
+                            </ul>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Our Mentors</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Blog</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Course</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contact</a>
-                        </li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
                     </ul>
-                    <div class="navbar-icons">
-                        <i class="fas fa-search search-icon"></i>
-                        <i class="fas fa-user user-icon"></i>
-                        <button class="signup-btn">Sign Up</button>
+                    <div class="top-actions d-flex align-items-center gap-2 ms-auto">
+                        <img class="search-icon" src="images/search-icon.png" alt="search icon">
+                        <img class="net-icon" src="images/Vector.png" alt="net icon">
                     </div>
+                    <a href="signup.html" class="custom-btn">Sign Up</a>
                 </div>
             </div>
         </nav>
         
-        <!-- Portal Heading -->
-        <div class="portal-heading">OUR PORTAL</div>
-        
-        <!-- Breadcrumb -->
-        <div class="breadcrumb-section">
-            <nav aria-label="breadcrumb">
-                <ol class="breadcrumb breadcrumb-custom">
-                    <li class="breadcrumb-item">Home</li>
-                    <li class="breadcrumb-item active" aria-current="page">Portal</li>
-                </ol>
-            </nav>
+        <!-- Hero Content (matching About page structure) -->
+        <div class="container position-relative" style="padding-top: 234px; z-index: 5;">
+            <h1 class="hero-title text-white fw-bold mb-2"> <img src="images/Line 2 (3).png" alt="">Portal</h1>
+            <p class="breadcrumb-text text-white mt-3">Home / <span class="text-primary">Portal</span></p>
         </div>
-    </div>
+    </section>
     
     <!-- Main Content -->
     <div class="main-content">
@@ -661,75 +549,66 @@
         </form>
     </div>
     
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="row">
+    <!-- Footer (matching About page) -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
                 <div class="col-md-4">
-                    <div class="footer-column">
-                        <h5>Mentorship Program</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">Performance Marketing</a></li>
-                            <li><a href="#">Digital Marketing</a></li>
-                            <li><a href="#">UI / UX Designer</a></li>
-                            <li><a href="#">Management Consulting</a></li>
-                            <li><a href="#">Product Marketing</a></li>
-                            <li><a href="#">Product Management</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="fw-semibold text-white mb-4">Mentorship Program</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Performance Marketing</li>
+                        <li class="mb-2">Digital Marketing</li>
+                        <li class="mb-2">UI / UX Designer</li>
+                        <li class="mb-2">Management Consulting</li>
+                        <li class="mb-2">Product Marketing</li>
+                        <li class="mb-2">Product Management</li>
+                    </ul>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="footer-column">
-                        <h5>Workshop</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">AI for Consultant</a></li>
-                            <li><a href="#">Product Management</a></li>
-                            <li><a href="#">Marketing Mastermind</a></li>
-                            <li><a href="#">Business Mastermind</a></li>
-                            <li><a href="#">Linkedin Growth</a></li>
-                            <li><a href="#">ChatGPT</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="fw-semibold text-white mb-4">Workshop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">AI for Consultant</li>
+                        <li class="mb-2">Product Management</li>
+                        <li class="mb-2">Marketing Mastermind</li>
+                        <li class="mb-2">Business Mastermind</li>
+                        <li class="mb-2">Linkedin Growth</li>
+                        <li class="mb-2">ChatGPT</li>
+                    </ul>
                 </div>
+
                 <div class="col-md-4">
-                    <div class="footer-column">
-                        <h5>Company</h5>
-                        <ul class="footer-list">
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Contact Us</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Become a Mentor</a></li>
-                            <li><a href="#">Privacy Policy</a></li>
-                            <li><a href="#">Help</a></li>
-                        </ul>
-                    </div>
+                    <h5 class="fw-semibold text-white mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">About Us</li>
+                        <li class="mb-2">Contact Us</li>
+                        <li class="mb-2">Careers</li>
+                        <li class="mb-2">Become a Mentor</li>
+                        <li class="mb-2">Privacy Policy</li>
+                        <li class="mb-2">Help</li>
+                    </ul>
                 </div>
             </div>
-            
-            <hr class="footer-divider">
-            
-            <div class="footer-bottom">
-                <p class="mb-0">© 2025 Educator. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#">Terms & Condition</a>
-                    <span class="divider"></span>
-                    <a href="#">Refund Policy</a>
-                </div>
+
+            <hr class="my-4">
+
+            <!-- Centered social icons -->
+            <div class="social-links d-flex justify-content-center gap-2 mb-3">
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-youtube"></i></a>
             </div>
-            
-            <div class="social-icons">
-                <a href="#" class="social-icon">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#" class="social-icon">
-                    <i class="fab fa-google"></i>
-                </a>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 small">© 2025 Educator. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="small me-3">Terms & Condition</span>
+                    <span class="text-white-50">|</span>
+                    <span class="small ms-3">Refund Policy</span>
+                </div>
             </div>
         </div>
     </footer>

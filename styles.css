@@ -308,12 +308,39 @@ body {
 
 .learners-grid {
   min-height: 280px;
+  overflow: hidden; /* hide overflow so the track slides cleanly */
+}
+
+.learners-track {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* spacing between cards */
+  width: max-content; /* allow track to span its content width */
+  will-change: transform;
+  animation: learnersMarquee var(--lrn-duration, 16s) linear infinite;
+}
+
+/* Pause animation on hover for accessibility/usability */
+.learners-grid:hover .learners-track {
+  animation-play-state: paused;
+}
+
+@keyframes learnersMarquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .learners-track { animation: none; }
 }
 
 .partner-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Ensure a sensible minimum width so items don’t collapse */
+  min-width: 180px;
 }
 
 .partner-card img {
