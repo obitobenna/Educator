@@ -1,0 +1,740 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainee/Mentee Portal</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f7ed;
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            position: relative;
+            height: 400px;
+            background-image: url('https://s3-alpha-sig.figma.com/img/6265/5dd5/84c7b99090c714d30a2ce47e52eac257?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=mRgCz36ZvEEWTJhRrV-zB9l-A3JpBHsUMf~aaJ0W0EhFdAMsWSbOyM6kTqKK9eDfALDgcFvKpKBPqo7TchJT2v5B5T8mP1YwFPyPQIVpfXgHdGQ8k3-jLDLz5XZ6oW3i0RCqdH0vLDQzJRfxSjqLhYQ8Gu6xnp-c~kzqhqCFSHBxO~rYqXbkGN6Qi-wF0yJWrJKDMsGRJhf5lNZdcB~Tr6IjKmn6g7wKfn4XJe7dK9L8JkrOzYuCCqJpTiH~oNe0hGpkNHf9pDdJf~tVRJhxNpBQXqFPYJfRbg3L0qN8xJhWYT7oLdF2BjhJ3pXq3xN6wL8qGbr9fXJ4p7kJQA__');
+            background-size: cover;
+            background-position: center;
+            margin-bottom: 50px;
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(51, 51, 51, 0.71);
+        }
+        
+        .navbar-custom {
+            background-color: white;
+            border-radius: 30px;
+            padding: 20px 40px;
+            margin: 50px 100px 0;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .navbar-logo {
+            width: 64px;
+            height: 44px;
+        }
+        
+        .navbar-custom .nav-link {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 600;
+            font-size: 16px;
+            color: rgba(0, 0, 0, 0.7);
+            margin: 0 15px;
+        }
+        
+        .navbar-icons {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        
+        .search-icon, .user-icon {
+            color: rgba(0, 0, 0, 0.5);
+            font-size: 18px;
+        }
+        
+        .signup-btn {
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+        }
+        
+        .signup-btn:hover {
+            background-color: #003366;
+        }
+        
+        .breadcrumb-section {
+            position: absolute;
+            bottom: 80px;
+            left: 135px;
+            z-index: 10;
+        }
+        
+        .portal-heading {
+            position: absolute;
+            bottom: 120px;
+            left: 100px;
+            color: white;
+            font-weight: 700;
+            font-size: 24px;
+            z-index: 10;
+        }
+        
+        .portal-heading::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 25px;
+            height: 2px;
+            background-color: white;
+        }
+        
+        .breadcrumb-custom {
+            background: transparent;
+            margin: 0;
+            padding: 0;
+            font-size: 16px;
+        }
+        
+        .breadcrumb-custom .breadcrumb-item {
+            color: #f6f7ed;
+        }
+        
+        .breadcrumb-custom .breadcrumb-item.active {
+            color: #1976d2;
+            font-weight: 500;
+        }
+        
+        /* Main Content */
+        .main-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+        
+        .section-title {
+            font-size: 24px;
+            font-weight: 500;
+            color: black;
+            margin-bottom: 10px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            right: -50px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 44px;
+            height: 2px;
+            background-color: black;
+        }
+        
+        .main-heading {
+            font-size: 30px;
+            font-weight: 600;
+            color: black;
+            margin-bottom: 50px;
+            margin-top: 20px;
+        }
+        
+        .form-label {
+            font-size: 16px;
+            color: black;
+            margin-bottom: 10px;
+            font-weight: 400;
+            letter-spacing: 0.8px;
+        }
+        
+        .form-label.medium {
+            font-weight: 500;
+        }
+        
+        .form-control, .form-select {
+            height: 55px;
+            border: 1px solid rgba(0, 0, 0, 0.6);
+            border-radius: 5px;
+            padding: 10px;
+            font-size: 16px;
+            color: rgba(51, 51, 51, 0.5);
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .form-control:focus, .form-select:focus {
+            border-color: #001f3f;
+            box-shadow: none;
+        }
+        
+        textarea.form-control {
+            height: 86px;
+        }
+        
+        .section-heading {
+            font-size: 18px;
+            font-weight: 600;
+            color: black;
+            margin-top: 50px;
+            margin-bottom: 30px;
+        }
+        
+        .section-heading span {
+            color: rgba(0, 0, 0, 0.4);
+        }
+        
+        .checkbox-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .checkbox-container input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            border: 1px solid rgba(0, 0, 0, 0.2);
+            margin-top: 2px;
+        }
+        
+        .checkbox-label {
+            font-size: 14px;
+            color: black;
+            margin: 0;
+            line-height: 1.5;
+        }
+        
+        .recaptcha-container {
+            background-color: white;
+            border-radius: 5px;
+            padding: 10px;
+            box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+            display: inline-flex;
+            align-items: center;
+            gap: 29px;
+            margin-bottom: 30px;
+        }
+        
+        .submit-btn {
+            width: 595px;
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            margin-top: 20px;
+        }
+        
+        .submit-btn:hover {
+            background-color: #003366;
+        }
+        
+        /* Responsive */
+        @media (max-width: 992px) {
+            .navbar-custom {
+                margin: 0 !important;
+                padding: 12px 16px;
+                width: 100% !important;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section { height: 320px; }
+            .portal-heading { left: 20px; bottom: 90px; font-size: 20px; }
+            .breadcrumb-section { left: 20px; bottom: 60px; }
+            .main-content { padding: 0 20px; }
+            .navbar-icons { display: none; }
+            .signup-btn { padding: 8px 16px; font-size: 14px; }
+            .submit-btn { width: 100%; }
+        }
+
+        @media (max-width: 576px) {
+            .hero-section { height: 280px; }
+            .portal-heading { font-size: 18px; }
+            .breadcrumb-custom { font-size: 14px; }
+        }
+        
+        /* Footer */
+        .footer {
+            background-color: #001f3f;
+            color: white;
+            padding: 50px 0 30px;
+            margin-top: 100px;
+        }
+        
+        .footer-content {
+            max-width: 1240px;
+            margin: 0 auto;
+            padding: 0 100px;
+        }
+        
+        .footer-column h5 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: 25px;
+        }
+        
+        .footer-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .footer-list li {
+            margin-bottom: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        
+        .footer-list li::before {
+            content: '';
+            width: 0;
+            height: 0;
+            border-left: 6px solid #017D01;
+            border-top: 4px solid transparent;
+            border-bottom: 4px solid transparent;
+            margin-top: 6px;
+            flex-shrink: 0;
+        }
+        
+        .footer-list li a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .footer-list li a:hover {
+            text-decoration: underline;
+        }
+        
+        .footer-divider {
+            border: 0;
+            border-top: 1px solid rgba(51, 51, 51, 0.5);
+            margin: 42px 0;
+        }
+        
+        .footer-bottom {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            position: relative;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 15px;
+            align-items: center;
+        }
+        
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        
+        .footer-links .divider {
+            width: 1px;
+            height: 20px;
+            background-color: white;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 10px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        
+        .social-icon {
+            width: 30px;
+            height: 30px;
+            background-color: white;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+        
+        .social-icon i {
+            color: #00804C;
+            font-size: 14px;
+        }
+        
+        @media (max-width: 1200px) {
+            .navbar-custom {
+                margin: 30px 50px 0;
+            }
+            
+            .main-content, .footer-content {
+                padding: 0 50px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .navbar-custom {
+                margin: 0 !important;
+                width: 100% !important;
+            }
+            
+            .main-content, .footer-content {
+                padding: 0 20px;
+            }
+            
+            .submit-btn {
+                width: 100%;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .hero-section {
+                height: 300px;
+            }
+            
+            .portal-heading {
+                font-size: 20px;
+                left: 20px;
+            }
+            
+            .breadcrumb-section {
+                left: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <div class="hero-overlay"></div>
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-custom">
+            <div class="container-fluid p-0">
+                <a class="navbar-brand" href="#">
+                    <img src="https://s3-alpha-sig.figma.com/img/9cd3/4f5e/d79e4d196e602476320ec4cb9546408a?Expires=1734307200&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=SwqJCi3iD6hXhCEbB0~4B1FrX4t8bZZoBR1NyXpgMl7vLqNJF~pXQH7K0uYwqVjQHJqYLqR8d4Jf0WTqKGJqd3hFfRn8YlJt3BqL1pYFYqJhN0D5bQfP7pWqXJe0Y8JFqGd5NvYqP0rYvWGfJqP5pKfGqF7JGqJ9fQJ7pY5vLqRY0pYqJfW8pK5YpJfYpJqP5LpYfJqY5pYJqP0YqJfYpJqYpJqY5pYJqYpJfYqJfYqJfYpYqJfYqJfYqJfYqJqYpJqYpJqYqJqYpJqYqJqYpJqYqJqYpJqYqJqYpJqYqJqY__" alt="Logo" class="navbar-logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav mx-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Our Mentors</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Blog</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Course</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
+                    <div class="navbar-icons">
+                        <i class="fas fa-search search-icon"></i>
+                        <i class="fas fa-user user-icon"></i>
+                        <button class="signup-btn">Sign Up</button>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Portal Heading -->
+        <div class="portal-heading">OUR PORTAL</div>
+        
+        <!-- Breadcrumb -->
+        <div class="breadcrumb-section">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb breadcrumb-custom">
+                    <li class="breadcrumb-item">Home</li>
+                    <li class="breadcrumb-item active" aria-current="page">Portal</li>
+                </ol>
+            </nav>
+        </div>
+    </div>
+    
+    <!-- Main Content -->
+    <div class="main-content">
+        <div class="section-title">TRAINEE / MENTEE PORTAL</div>
+        <h1 class="main-heading">Your Gateway to Learning, Growth and Mentorship.</h1>
+        
+        <!-- Form -->
+        <form>
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label">First name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Last name</label>
+                    <input type="text" class="form-control" placeholder="Enter your name">
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label">Email</label>
+                    <input type="email" class="form-control" placeholder="Enter email">
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Phone</label>
+                    <input type="tel" class="form-control" placeholder="Enter num">
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label medium">Registration type</label>
+                    <select class="form-select">
+                        <option selected>Select type</option>
+                        <option value="1">Trainee</option>
+                        <option value="2">Mentee</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select">
+                        <option selected>Select gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label medium">Program of interest / Training</label>
+                    <select class="form-select">
+                        <option selected>Select Training / program</option>
+                        <option value="1">Performance Marketing</option>
+                        <option value="2">Digital Marketing</option>
+                        <option value="3">UI / UX Designer</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Preferred start date</label>
+                    <select class="form-select">
+                        <option selected>dd/mm/yyyy</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label medium">Availability <span style="color: rgba(0,0,0,0.4); font-size: 14px; font-weight: 400;">(Weekdays/ weekends/ online or in-person)</span></label>
+                    <select class="form-select">
+                        <option selected>Select availability</option>
+                        <option value="1">Weekdays</option>
+                        <option value="2">Weekends</option>
+                        <option value="3">Online</option>
+                        <option value="4">In-person</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">Gender</label>
+                    <select class="form-select">
+                        <option selected>Select gender</option>
+                        <option value="1">Male</option>
+                        <option value="2">Female</option>
+                        <option value="3">Other</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label">How did you hear about us?</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label">What skills or knowledge do you hope to gain</label>
+                    <textarea class="form-control"></textarea>
+                </div>
+            </div>
+            
+            <!-- Educational / Professional Background -->
+            <h2 class="section-heading">Educational / Professional Background <span>(for mentee)</span></h2>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label medium">Highest level of education</label>
+                    <select class="form-select">
+                        <option selected>Select degree</option>
+                        <option value="1">High School</option>
+                        <option value="2">Bachelor's</option>
+                        <option value="3">Master's</option>
+                        <option value="4">PhD</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label medium">Current occupation / field</label>
+                    <select class="form-select">
+                        <option selected>Type occupation/ field</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="row g-4 mb-4">
+                <div class="col-md-6">
+                    <label class="form-label medium">Relevant skills</label>
+                    <select class="form-select">
+                        <option selected>Select skills</option>
+                    </select>
+                </div>
+                <div class="col-md-6">
+                    <label class="form-label medium">Years of experience</label>
+                    <select class="form-select">
+                        <option selected>Select years</option>
+                        <option value="1">0-1 years</option>
+                        <option value="2">1-3 years</option>
+                        <option value="3">3-5 years</option>
+                        <option value="4">5+ years</option>
+                    </select>
+                </div>
+            </div>
+            
+            <!-- Terms & Conditions -->
+            <div class="checkbox-container">
+                <input type="checkbox" id="terms">
+                <label class="checkbox-label" for="terms">
+                    By clicking this box, I confirm that I have read, understood, and agree to be bound by the <strong>Terms & Condition</strong> and Privacy Policy of this service
+                </label>
+            </div>
+            
+            <!-- reCAPTCHA -->
+            <div class="recaptcha-container">
+                <div class="d-flex align-items-center gap-2">
+                    <input type="checkbox" id="recaptcha" style="width: 20px; height: 20px; border: 1px solid rgba(0,0,0,0.2);">
+                    <label for="recaptcha" style="margin: 0; font-size: 14px;">I'm not a robot</label>
+                </div>
+                <img src="https://s3-alpha-sig.figma.com/img/5fac/ef35/d355cce080958d0fab3cd59721c6c29b?Expires=1734912000&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=NM2CZZv2O1LYp6CcZH8KQ2gHVn8EQXHSZ3JqmU0j6aQ0CtTJPLzwWTLOjpx4PbSvz3lZ~4xUJEYKVkH5x3BZNEf1R9nHbKQdVGPbFmK3Z8~YQH4m3q2Yx9TJqRz3FcJxG4HJnKgV8yQ3LJ5TqGXjPJQjHy7LQ3F8VJ5xN2QqPqZ5JjhGXmQ8Y3V9JqF3TpYxKJnQ5VjH8LqF3Z~YxJ5QnH8VjF3TpYxJnQ5VjH8LqF3Z~YxJ5QnH8VjF3TpYxJnQ5VjH8LqF3Z~YxJ5QnH8VjF3TpYxJnQ5VjH8LqF3Z~YxJ5Q__" alt="reCAPTCHA" style="width: 30px; height: 25px;">
+            </div>
+            
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Submit</button>
+        </form>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h5>Mentorship Program</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">Performance Marketing</a></li>
+                            <li><a href="#">Digital Marketing</a></li>
+                            <li><a href="#">UI / UX Designer</a></li>
+                            <li><a href="#">Management Consulting</a></li>
+                            <li><a href="#">Product Marketing</a></li>
+                            <li><a href="#">Product Management</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h5>Workshop</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">AI for Consultant</a></li>
+                            <li><a href="#">Product Management</a></li>
+                            <li><a href="#">Marketing Mastermind</a></li>
+                            <li><a href="#">Business Mastermind</a></li>
+                            <li><a href="#">Linkedin Growth</a></li>
+                            <li><a href="#">ChatGPT</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="footer-column">
+                        <h5>Company</h5>
+                        <ul class="footer-list">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">Careers</a></li>
+                            <li><a href="#">Become a Mentor</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Help</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <hr class="footer-divider">
+            
+            <div class="footer-bottom">
+                <p class="mb-0">© 2025 Educator. All rights reserved.</p>
+                <div class="footer-links">
+                    <a href="#">Terms & Condition</a>
+                    <span class="divider"></span>
+                    <a href="#">Refund Policy</a>
+                </div>
+            </div>
+            
+            <div class="social-icons">
+                <a href="#" class="social-icon">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="#" class="social-icon">
+                    <i class="fab fa-google"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

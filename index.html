@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Educator - Empowering Minds, Shaping Digital Futures</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Sora:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <!-- Navbar -->
+            <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-pill position-absolute mx-auto"
+                style="top: 50px; left: 100px; right: 100px; max-width: 1240px; z-index: 10;">
+                <div class="container-fluid px-4 py-2">
+                    <a class="navbar-brand" href="#">
+                        <img src="images/educator-book-and-laptop-in-form-of-a-lo_RJC9ZlgSSvSP1fHwtzhhfw_etmMTLOrS7i9Vn0BUXDNsA-removebg-preview 1.png"
+                            alt="Logo" height="44">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav ms-auto me-3">
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="mentor.html">Our Mentors</a></li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="#">Blog</a></li>
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle fw-semibold" href="#" id="courseDropdown"
+                                    role="button" data-bs-toggle="dropdown" aria-expanded="false">Course</a>
+                                <ul class="dropdown-menu" aria-labelledby="courseDropdown">
+                                    <li><a class="dropdown-item" href="courses.html">All Courses</a></li>
+                                    <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                                    <li><a class="dropdown-item" href="#">Business</a></li>
+                                </ul>
+                            </li>
+                            <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+                        </ul>
+                        <div class="top-actions d-flex align-items-center gap-2 ms-auto">
+                            <!-- Search Icon -->
+                            <img class="search-icon" src="images/search-icon.png" alt="search icon">
+                            <img class="net-icon" src="images/Vector.png" alt="net icon">
+                        </div>
+                        <a href="signup.html" class="custom-btn">Sign Up</a>
+                    </div>
+                </div>
+            </nav>
+
+            <!-- Hero Content -->
+            <div class="container text-center text-white" style="padding-top: 180px;">
+                <h1 class="display-3 fw-bold mb-4">Empowering Minds, Shaping<br> Digital Futures</h1>
+                <p class="lead mb-4">Learn, grow, and succeed with expert-led training programs, personalized
+                    mentorship, and digital skills for the future.</p>
+                <a href="portal.html" class="btn btn-dark btn-lg px-5 ">Apply as a mentor</a>
+
+                <!-- Carousel Dots -->
+                <div class="carousel-dots mt-5">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Upcoming Training -->
+    <section class="upcoming-training py-4">
+        <div class="container">
+            <div class="card border-0 rounded-4 overflow-hidden" style="background-color: #001f3f;">
+                <div class="card-body p-5">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <h6 class="text-white text-uppercase mb-3">Upcoming Trainings</h6>
+                            <h3 class="text-white fw-bold mb-3">AWS Cloud Computing</h3>
+                            <p class="text-white mb-0">5th October, 00:00 | Virtual Classes</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="countdown-row d-flex justify-content-end gap-3">
+                                <div class="countdown-box">
+                                    <h2 class="fw-bold mb-0">10</h2>
+                                    <p class="mb-0">Days</p>
+                                </div>
+                                <div class="countdown-box">
+                                    <h2 class="fw-bold mb-0">10</h2>
+                                    <p class="mb-0">Hours</p>
+                                </div>
+                                <div class="countdown-box">
+                                    <h2 class="fw-bold mb-0">10</h2>
+                                    <p class="mb-0">Minutes</p>
+                                </div>
+                                <div class="countdown-box">
+                                    <h2 class="fw-bold mb-0">10</h2>
+                                    <p class="mb-0">Seconds</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do -->
+    <section class="what-we-do py-5">
+        <div class="container text-center">
+            <div class="section-header mb-3">
+                <img src="images/Group 8.png" alt="what-we-do">
+            </div>
+            <h2 class="fw-bold mb-5" style="max-width: 932px; margin: 0 auto;">We Empower Learners and Organizations
+                Through Personalized Mentorship, and ICT training For The Future.</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/mentorship.png" alt="mentorship">
+                        </div>
+                        <h5 class="fw-semibold text-white mt-4">Mentorship</h5>
+                        <p class="text-light">Provide one-on-one and group mentorship sessions to guide learners in
+                            career paths, certifications, and professional development.</p>
+                        <button class="btn btn-light text-success mt-3 learn-btn">Learn more</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/training.png" alt="training">
+                        </div>
+                        <h5 class="fw-semibold text-white mt-4">Training</h5>
+                        <p class="text-light">Offer practical, hands-on ICT training in areas like programming,
+                            networking, cybersecurity, and digital tools.</p>
+                        <button class="btn btn-light text-success mt-3 learn-btn">Learn more</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/educator.png" alt="educator">
+                        </div>
+                        <h5 class="fw-semibold text-white mt-4">Educator</h5>
+                        <p class="text-light">Deliver structured ICT lessons, tutorials, and resources tailored to
+                            different skill levels.</p>
+                        <button class="btn btn-light text-success mt-3 learn-btn">Learn more</button>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="service-card">
+                        <div class="service-icon">
+                            <img src="images/cerifications.png" alt="">
+                        </div>
+                        <h5 class="fw-semibold text-white mt-4">Certification</h5>
+                        <p class="text-light">Recognized credentials upon course completion</p>
+                        <button class="btn btn-light text-success mt-3 learn-btn">Learn more</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who We Are -->
+    <section class="who-we-are py-5 position-relative">
+        <div class="row g-0">
+            <div class="col-lg-6 bg-success text-white p-5">
+                <div class="section-header mb-4">
+                    <img src="images/Group 8 (1).png" alt="">
+                </div>
+                <h2 class="fw-bold mb-4">Empowering Learners, Shaping Careers, Driving Digital Growth</h2>
+                <p class="mb-4">At [Your Brand Name], we believe education goes beyond the classroom. Our platform
+                    blends expert-led teaching, personalized mentorship, and hands-on ICT training to equip individuals
+                    and organizations with the skills they need to thrive in today's digital world.</p>
+
+                <div class="feature-list">
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="feature-icon me-3"><img src="images/Vector (10).png" alt="">
+                        </div>
+                        <div>
+                            <h6 class="fw-semibold text-white">Expert Guidance</h6>
+                            <p class="mb-0">Learn directly from seasoned educators and industry mentors.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="feature-icon me-3"><img src="images/Vector (11).png" alt=""></div>
+                        <div>
+                            <h6 class="fw-semibold text-white">Personalized Mentorship</h6>
+                            <p class="mb-0">One-on-one and group mentoring to guide your career journey.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-item d-flex align-items-start mb-3">
+                        <div class="feature-icon me-3"><img src="images/Vector (12).png" alt=""></div>
+                        <div>
+                            <h6 class="fw-semibold text-white">Hands-On Training</h6>
+                            <p class="mb-0">Gain practical ICT skills through real-world projects and workshops.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="d-flex align-items-center gap-3 mt-4 flex-wrap who-persona-row">
+                    <button class="btn btn-light text-success">Discover more</button>
+                    <div class="d-flex align-items-center gap-2 who-persona">
+                        <img src="images/2150312703-removebg-preview 1.png" alt="Jack Jones" class="persona-avatar" loading="lazy">
+                        <div class="text-white">
+                            <span class="fw-semibold d-block text-white">Jack Jones</span>
+                            <small class="text-white-50 d-block">Director</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-6 position-relative text-center">
+                <img src="images/Group 41.png" alt="" class="img-fluid mx-auto d-block" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Learners Worldwide -->
+    <section class="learners-section py-5">
+        <div class="container">
+            <div class="learner-all">
+                <div class="learner-img">
+                    <img src="images/Vector (7).png" alt="" class="">
+                </div>
+                <h2 class="fw-bold mb-4 text-wlrds">TRAINEES THAT HAVE BENEFIT FROM OUR PROGRAM <span><img src="images/Line 2 (2).png" alt=""></span></h2>
+                <h2 class="fw-bold mb-4 text-wlrd"><span class="text-success">1.5M +</span> Learners World Wide</h2>
+            </div>
+            <div class="row align-items-center g-4">
+                <div class="col-md-6">
+                    <img src="images/global-network-connection-3d-model-worlds-interconnectivity 1.png"
+                        alt="Global Network" class="img-fluid">
+                </div>
+                <div class="col-md-6">
+                    <div class="learners-grid bg-success p-4 rounded-3">
+                        <div class="row g-4">
+                            <div class="col-12 col-md-4">
+                                <div class="partner-card">
+                                    <img src="images/Rectangle 17.png" alt="Simplelearn" class="img-fluid rounded-3">
+                                    <div class="partner-label">Simplelearn</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="partner-card">
+                                    <img src="images/Rectangle 17 (1).png" alt="Simplelearn"
+                                        class="img-fluid rounded-3">
+                                    <div class="partner-label">Simplelearn</div>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-4">
+                                <div class="partner-card">
+                                    <img src="images/Rectangle 17 (2).png" alt="Simplelearn"
+                                        class="img-fluid rounded-3">
+                                    <div class="partner-label">Simplelearn</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Learn Section -->
+    <section class="why-learn py-5">
+        <div class="container">
+            <div class="section-header text-start mb-3">
+                <h6 class="text-uppercase fw-semibold mb-2 d-inline-flex align-items-center">
+                    Why Learn With EDUCATOR
+                </h6>
+                <img src="images/Line 2 (1).png" alt="">
+            </div>
+
+            <h2 class="text-start fw-bold mb-5" style="max-width: 760px;">Building Future-Ready Skills With Expert
+                Guidance, Practical Training, and Personalized Mentorship You Can Trust...</h2>
+
+            <div class="row px-5">
+                <div class="col-lg-6">
+                    <div class="card border-0 shadow-sm p-4">
+                        <div class="why-item d-flex align-items-start">
+                            <div class="number-badge">01</div>
+                            <div>
+                                <h5 class="fw-bold">Flexible Learning Options</h5>
+                                <p>Choose between online, hybrid, or in-person classes that fit your schedule.</p>
+                            </div>
+                        </div>
+                        <div class="why-item d-flex align-items-start">
+                            <div class="number-badge">02</div>
+                            <div>
+                                <h5 class="fw-bold">Career-Focused Approach</h5>
+                                <p>We go beyond teaching – helping you build portfolios, prepare for certifications, and
+                                    connect with opportunities.</p>
+                            </div>
+                        </div>
+                        <div class="why-item d-flex align-items-start">
+                            <div class="number-badge">03</div>
+                            <div>
+                                <h5 class="fw-bold">Supportive Community</h5>
+                                <p>Join a network of learners, mentors, and professionals sharing knowledge and
+                                    collaboration.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-6">
+                    <div class="position-relative">
+                        <div class="triangle-bg"></div>
+                        <img src="images/Rectangle 20.png" alt="Why Learn" class="img-fluid rounded shadow">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Courses -->
+    <section class="featured-courses py-5">
+        <div class="container">
+            <div class="section-header vec-img-hd text-center mb-4">
+                <img src="images/Vector (9).png" alt="" class="vec-img">
+                <h6 class="text-uppercase fw-semibold mb-2 feature-text" > <img src="images/Line 3.png" alt="">  Our Featured Course <img src="images/Line 2 (2).png" alt=""></h6>
+                <div class="underline mx-auto"></div>
+            </div>
+            <h2 class="text-center fw-bold mb-5">Learn, grow, and excel with courses crafted by <br> experts for real-world
+                success.</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <span class="badge bg-dark position-absolute">IT & Software</span>
+                            <button class="btn-wishlist" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 23" fill="none" class="wishlist-heart">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold">Java programming masterclass for software developers</h6>
+                            <p class="small text-muted">Master one of the world's most powerful and versatile
+                                programming languages.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small">📚 5 Lessons</span>
+                                <span class="small">👥 3 Student</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">⭐⭐⭐⭐☆ <span class="small">4 (4)</span></div>
+                                <span class="fw-semibold">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Repeat for other courses -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <span class="badge bg-dark position-absolute">Photography</span>
+                            <button class="btn-wishlist" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 23" fill="none" class="wishlist-heart">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold">Workflow strategy from capture to output</h6>
+                            <p class="small text-muted">We follow a simple driven design tailored training programs &
+                                provide guided mentorship.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small">📚 5 Lessons</span>
+                                <span class="small">👥 3 Student</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">⭐⭐⭐⭐☆ <span class="small">4 (4)</span></div>
+                                <span class="fw-semibold">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <span class="badge bg-dark position-absolute">Marketing</span>
+                            <button class="btn-wishlist" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 23" fill="none" class="wishlist-heart">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold">Strategies to financial freedom</h6>
+                            <p class="small text-muted">We equip learners with digital skills, practical knowledge, and
+                                mentorship that go beyond the classroom.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small">📚 5 Lessons</span>
+                                <span class="small">👥 3 Student</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">⭐⭐⭐⭐☆ <span class="small">4 (4)</span></div>
+                                <span class="fw-semibold">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <span class="badge bg-dark position-absolute">Business</span>
+                            <button class="btn-wishlist" aria-label="Add to wishlist">
+                                <svg width="20" height="20" viewBox="0 0 24 23" fill="none" class="wishlist-heart">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold">Digital transformation for business leaders</h6>
+                            <p class="small text-muted">Our programs equip you with digital skills, tools, and
+                                strategies to stay competitive.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small">📚 5 Lessons</span>
+                                <span class="small">👥 3 Student</span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">⭐⭐⭐⭐☆ <span class="small">4 (4)</span></div>
+                                <span class="fw-semibold">Free</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Removed redundant carousel indicators to keep only main hero dots -->
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section py-5 text-white position-relative">
+        <div class="cta-overlay"></div>
+        <div class="container position-relative">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Join Our Mentorship and ICT <br>Training Program</h2>
+                    <p class="lead">Partner with educator for expert guidance, tailored solutions, and  reliable ICT
+                        support.</p>
+                    <a href="portal.html" class="btn btn-success btn-lg px-5 ">Become a mentor →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Team -->
+    <section class="our-team py-5">
+        <div class="container">
+            <div class="section-header text-center mb-4">
+                <h6 class="text-uppercase fw-semibold mb-2 mentorship-text"><img src="images/Line 3.png" alt="">Meet Our Mentorship Expert <img src="images/Line 2 (2).png" alt=""></h6>
+                <div class="underline mx-auto"></div>
+            </div>
+            <h2 class="text-center fw-bold mb-5">Guiding you with experience, knowledge, and support to <br> help you grow in
+                your ICT journey.</h2>
+
+            <div class="row g-4 d-flex align-items-center">
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-all">
+                        <div class="team-image">
+                            <img src="images/2150312703-removebg-preview 1.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="team-image-2">
+                            <img src="images/Rectangle 27.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        </div>
+                        <div class="p-4 text-white">
+                            <h5 class="fw-semibold">Jack Jones</h5>
+                            <p class="mb-2 you-t">Youtube, Podcaster</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating"><img src="images/Frame 47.png" alt=""><small>4 (4 Reviews)  </small></div>
+                                <span class="small stud">👥 3 Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-all">
+                        <div class="team-image">
+                            <img src="images/mentee2 1.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="team-image-2">
+                            <img src="images/Rectangle 27.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        </div>
+                        <div class="p-4 text-white">
+                            <h5 class="fw-semibold">Harris Yung</h5>
+                            <p class="mb-2 you-t">Certify Life Coach</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating"><img src="images/Frame 47.png" alt=""><small>4 (4 Reviews)  </small></div>
+                                <span class="small stud">👥 3 Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-all">
+                        <div class="team-image">
+                            <img src="images/2150312703-removebg-preview 1.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="team-image-2">
+                            <img src="images/Rectangle 27.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        </div>
+                        <div class="p-4 text-white">
+                            <h5 class="fw-semibold">Jack Jones</h5>
+                            <p class="mb-2 you-t">Youtube, Podcaster</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating"><img src="images/Frame 47.png" alt=""><small>4 (4 Reviews)  </small></div>
+                                <span class="small stud">👥 3 Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <div class="team-card">
+                        <div class="team-all">
+                        <div class="team-image">
+                            <img src="images/mentor1 1.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        <div class="team-image-2">
+                            <img src="images/Rectangle 27.png" alt="Team Member" class="img-fluid">
+                        </div>
+                        </div>
+                        <div class="p-4 text-white">
+                            <h5 class="fw-semibold">Cole Mart</h5>
+                            <p class="mb-2 you-t">Doctor</p>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating"><img src="images/Frame 47.png" alt=""><small>4 (4 Reviews)  </small></div>
+                                <span class="small stud">👥 3 Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials (Updated) -->
+    <section class="testimonials-updated py-5">
+        <div class="container">
+            <div class="row align-items-start g-4">
+                <!-- Left content -->
+                <div class="col-lg-5">
+                    <div class="mb-3 d-flex align-items-center gap-3">
+                        <img src="images/Group 11.png" alt="Testimonials">
+                    </div>
+                    <h2 class="fw-bold mb-3 " style="max-width: 420px;">
+                        What Our Clients
+                        <br />Say About Us
+                    </h2>
+                    <p class="mb-4" style="max-width: 500px;">Our community of learners, mentees, and professionals
+                        share their stories of growth, confidence, and career success. See how our mentorship,
+                        education, and ICT training have transformed lives and opened new opportunities.</p>
+                    <button class="btn btn-success px-4 btn-view-more">
+                        View more
+                        <span class="ms-2">→</span>
+                    </button>
+                </div>
+
+                <!-- Right stacked cards -->
+                <div class="col-lg-7">
+                    <div class="t-stack">
+                        <!-- Card 1 -->
+                        <div class="t-card text-white p-4 mb-4">
+                            <span class="t-quote">“”</span>
+                            <div class="d-flex align-items-center">
+                                <img src="images/mentor1 1.png" alt="Mark Smith" class="t-avatar me-3">
+                                <div>
+                                    <h6 class="fw-semibold text-white mb-1">Mark Smith</h6>
+                                    <p class="mb-0 small">This program transformed my career. The mentorship was
+                                        practical, the training hands-on, and the guidance gave me the confidence to
+                                        thrive in the ICT industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="t-card text-white p-4 mb-4">
+                            <span class="t-quote">“”</span>
+                            <div class="d-flex align-items-center">
+                                <img src="images/mentee2 1.png" alt="Jane Russel" class="t-avatar me-3">
+                                <div>
+                                    <h6 class="fw-semibold text-white mb-1">Jane Russel</h6>
+                                    <p class="mb-0 small">This program transformed my career. The mentorship was
+                                        practical, the training hands-on, and the guidance gave me the confidence to
+                                        thrive in the ICT industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="t-card text-white p-4">
+                            <span class="t-quote">“”</span>
+                            <div class="d-flex align-items-center">
+                                <img src="images/mentee2 1.png"
+                                    alt="Sandra John" class="t-avatar me-3">
+                                <div>
+                                    <h6 class="fw-semibold text-white mb-1">Sandra John</h6>
+                                    <p class="mb-0 small">This program transformed my career. The mentorship was
+                                        practical, the training hands-on, and the guidance gave me the confidence to
+                                        thrive in the ICT industry.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    <section class="faqs-updated py-5">
+        <div class="container-fluid py-5 bg-success">
+            <div class="container py-4">
+                <div class="row g-4 align-items-stretch">
+
+                    <!-- Left side card -->
+                    <div class="col-12 col-lg-5 d-flex">
+                        <div class="faq-left-card p-5 text-white rounded-3 w-100 bg-dark-blue">
+                            <h2 class="fw-bold mb-4" style="max-width: 520px;">
+                                Have questions or
+                                need guidance? We’re
+                                here to support your
+                                learning journey—
+                                reach out today.
+                            </h2>
+                            <a href="contact.html" class="btn btn-light fw-bold px-4">Contact Us</a>
+                        </div>
+                    </div>
+
+                    <!-- Right side -->
+                    <div class="col-12 col-lg-7 d-flex flex-column">
+                        <!-- Tag -->
+                        <div class="faq-tag d-flex align-items-center mb-3">
+                            <span class="fw-semibold text-white-50">FAQs <img src="images/Line 2 (2).png" alt=""></span>
+                            
+                        </div>
+
+                        <!-- Accordion -->
+                        <div class="accordion w-100" id="faqAccordion">
+                            <!-- Item 1 (open by default) -->
+                            <div class="accordion-item faq-item mb-3 border-0 rounded-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button fw-semibold text-dark d-flex align-items-center no-arrow"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq1"
+                                        aria-expanded="true" aria-controls="faq1">
+                                        <span class="toggle-icon me-2">−</span>
+                                        What kind of mentorship do you offer?
+                                    </button>
+                                </h2>
+                                <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        We connect learners with experienced mentors who provide career guidance,
+                                        certification support, and personalized advice for professional growth.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 2 -->
+                            <div class="accordion-item faq-item mb-3 border-0 rounded-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed fw-semibold text-dark d-flex align-items-center no-arrow"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq2"
+                                        aria-expanded="false" aria-controls="faq2">
+                                        <span class="toggle-icon me-2">+</span>
+                                        Who can enroll in your ICT training programs?
+                                    </button>
+                                </h2>
+                                <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Our programs are open to beginners, students, and professionals seeking hands-on
+                                        ICT skills.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 3 -->
+                            <div class="accordion-item faq-item mb-3 border-0 rounded-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed fw-semibold text-dark d-flex align-items-center no-arrow"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq3"
+                                        aria-expanded="false" aria-controls="faq3">
+                                        <span class="toggle-icon me-2">+</span>
+                                        Will I get a certificate after completing a program?
+                                    </button>
+                                </h2>
+                                <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Yes, participants receive certificates upon successful completion of training
+                                        requirements.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 4 -->
+                            <div class="accordion-item faq-item mb-3 border-0 rounded-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed fw-semibold text-dark d-flex align-items-center no-arrow"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq4"
+                                        aria-expanded="false" aria-controls="faq4">
+                                        <span class="toggle-icon me-2">+</span>
+                                        How do I apply for mentorship or training?
+                                    </button>
+                                </h2>
+                                <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        You can apply through our website by selecting your preferred program and
+                                        completing the signup form.
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Item 5 -->
+                            <div class="accordion-item faq-item mb-3 border-0 rounded-3">
+                                <h2 class="accordion-header">
+                                    <button
+                                        class="accordion-button collapsed fw-semibold text-dark d-flex align-items-center no-arrow"
+                                        type="button" data-bs-toggle="collapse" data-bs-target="#faq5"
+                                        aria-expanded="false" aria-controls="faq5">
+                                        <span class="toggle-icon me-2">+</span>
+                                        How much do the programs cost?
+                                    </button>
+                                </h2>
+                                <div id="faq5" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                                    <div class="accordion-body text-muted">
+                                        Pricing varies by program type and duration. See the Courses page for details.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog -->
+    <section class="blog py-5 ">
+        <div class="container">
+            <div class="section-header text-center mb-4">
+                <div class="insight-tag d-flex align-items-center gap-2 mb-2">
+                    <img src="images/Group 13 (2).png" alt="Insight">
+                </div>
+            </div>
+            <h2 class="fw-bold mb-5" style="max-width: 670px;">Sharing knowledge, experiences, and industry trends to inspire growth and empower
+                learners in the digital age.</h2>
+
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <div class="blog-image position-relative">
+                            <img src="images/choirs 2.png" alt="Blog" class="img-fluid rounded">
+                            <div class="blog-date">
+                                <span class="day">10</span>
+                                <span class="month">Oct 2025</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-3">
+                            <div class="blog-meta mb-2">
+                                <span class="meta-item">Leave a comment</span>
+                                <span class="meta-item">Kelvin duke</span>
+                            </div>
+                            <h5 class="fw-semibold">Workflow strategy from capture to output</h5>
+                            <div class="divider my-3"></div>
+                            <p class="text-muted">We follow a simple driven design tailored training programs & provide
+                                guided mentorship.</p>
+                            <a href="#" class="fw-semibold">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <div class="blog-image position-relative">
+                            <img src="images/choirs 2.png" alt="Blog" class="img-fluid rounded">
+                            <div class="blog-date">
+                                <span class="day">10</span>
+                                <span class="month">Oct 2025</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-3">
+                            <div class="blog-meta mb-2">
+                                <span class="meta-item">Leave a comment</span>
+                                <span class="meta-item">Kelvin duke</span>
+                            </div>
+                            <h5 class="fw-semibold">Java programming for software developers</h5>
+                            <div class="divider my-3"></div>
+                            <p class="text-muted">Master one of the world's most powerful and versatile programming
+                                languages. Javascript and Nodejs.....</p>
+                            <a href="#" class="fw-semibold">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <div class="blog-card">
+                        <div class="blog-image position-relative">
+                            <img src="images/choirs 2.png" alt="Blog" class="img-fluid rounded">
+                            <div class="blog-date">
+                                <span class="day">10</span>
+                                <span class="month">Oct 2025</span>
+                            </div>
+                        </div>
+                        <div class="blog-content p-3">
+                            <div class="blog-meta mb-2">
+                                <span class="meta-item">Leave a comment</span>
+                                <span class="meta-item">Kelvin duke</span>
+                            </div>
+                            <h5 class="fw-semibold">Digital transformation for business leaders</h5>
+                            <div class="divider my-3"></div>
+                            <p class="text-muted">Our programs equip you with digital skills, tools, and strategies to
+                                stay competitive.</p>
+                            <a href="#" class="fw-semibold">Read more</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CLIENTS & PARTNERS SECTION -->
+    <section class="clients-section py-5 bg-light">
+        <div class="container">
+            <!-- Header -->
+            <div class="clients-header mt-5 mb-5">
+                <div class="clients-label d-flex align-items-center mb-3">
+                    <div class="client-im">
+                        <img src="images/Vector (9).png" alt="" class="vec-img">
+                        <h4 class="mb-0 text-uppercase"><img src="images/Line 3.png" alt="">Our Partners</h4>
+                    </div>
+                </div>
+                <h2 class="fw-bold">Our network of valued clients <br> and strategic partners.</h2>
+            </div>
+
+            <!-- Logos Scrolling Animation -->
+            <div class="clients-logos overflow-hidden position-relative">
+                <div class="logos-track d-flex align-items-center gap-4">
+                    <div class="logo-item">
+                        <img src="images/bear.png" alt="bear" >
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/ampersand-3d-icon 1.png" alt="ampersand-3d-icon">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/39829-removebg-preview 1.png" alt="logo-item" >
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/1177527_8922-removebg-preview 1.png" alt="logo-item" >
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/bear.png" alt="bear" class="img-fluid">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/ampersand-3d-icon 1.png" alt="ampersand-3d-icon" >
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/1177527_8922-removebg-preview 1.png" alt="logo-item">
+                    </div>
+                    <div class="logo-item">
+                        <img src="images/39829-removebg-preview 1.png" alt="logo-item">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Mentorship Program</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Performance Marketing</li>
+                        <li class="mb-2">Digital Marketing</li>
+                        <li class="mb-2">UI / UX Designer</li>
+                        <li class="mb-2">Management Consulting</li>
+                        <li class="mb-2">Product Marketing</li>
+                        <li class="mb-2">Product Management</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Workshop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">AI for Consultant</li>
+                        <li class="mb-2">Product Management</li>
+                        <li class="mb-2">Marketing Mastermind</li>
+                        <li class="mb-2">Business Mastermind</li>
+                        <li class="mb-2">Linkedin Growth</li>
+                        <li class="mb-2">ChatGPT</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">About Us</li>
+                        <li class="mb-2">Contact Us</li>
+                        <li class="mb-2">Careers</li>
+                        <li class="mb-2">Become a Mentor</li>
+                        <li class="mb-2">Privacy Policy</li>
+                        <li class="mb-2">Help</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Centered social icons -->
+            <div class="social-links d-flex justify-content-center gap-2 mb-3">
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-youtube"></i></a>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 small">© 2025 Educator. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="small me-3">Terms & Condition</span>
+                    <span class="text-white-50">|</span>
+                    <span class="small ms-3">Refund Policy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>

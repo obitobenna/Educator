@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portal Login</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600&family=Poppins:wght@500&family=Raleway:wght@500&family=Nunito:wght@600;700&family=Inter:wght@400&display=swap" rel="stylesheet">
+    
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: #f6f7ed;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+        
+        .login-container {
+            position: relative;
+            min-height: 100vh;
+            padding: 25px 114px;
+        }
+        
+        /* Left Image Panel */
+        .image-panel {
+            position: absolute;
+            left: 150px;
+            top: 55px;
+            width: 494px;
+            height: 689px;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #001f3f;
+        }
+        
+        .image-panel-bg {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        
+        .image-panel-bg img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            left: 0;
+            top: 0;
+            object-fit: contain;
+            object-position: center;
+        }
+        
+        .image-overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+        }
+        
+        .logo-container {
+            position: absolute;
+            left: 18px;
+            top: 18px;
+            width: 90px;
+            height: 60px;
+            z-index: 10;
+        }
+
+        .logo-container img {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            object-position: center;
+            left: 0;
+            top: 0;
+        }
+        
+        /* Right Form Panel */
+        .form-panel {
+            position: absolute;
+            right: 114px;
+            top: 25px;
+            width: 579px;
+        }
+        
+        .portal-login-title {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 500;
+            font-size: 24px;
+            text-align: center;
+            color: black;
+            margin-bottom: 35px;
+            margin-top: 149px;
+        }
+        
+        .form-input {
+            width: 100%;
+            height: 45px;
+            padding: 10px;
+            border: 1px solid #001f3f;
+            border-radius: 10px;
+            font-family: 'Raleway', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            color: black;
+            margin-bottom: 30px;
+        }
+        
+        .form-input::placeholder {
+            opacity: 0.5;
+            color: black;
+        }
+        
+        .form-input.password-input {
+            font-family: 'Montserrat', sans-serif;
+        }
+        
+        .remember-forget-row {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            opacity: 0.6;
+            margin-bottom: 25px;
+            margin-top: -5px;
+        }
+        
+        .remember-me {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .remember-checkbox {
+            width: 12px;
+            height: 12px;
+            appearance: none;
+            border: 1px solid #001f3f;
+            border-radius: 2px;
+            display: inline-block;
+            position: relative;
+            background: #000;
+        }
+        .remember-checkbox:checked::after {
+            content: '';
+            position: absolute;
+            left: 3px;
+            top: 0px;
+            width: 4px;
+            height: 8px;
+            border: solid #fff;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+        }
+        
+        .remember-text,
+        .forget-text {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            color: black;
+            margin: 0;
+        }
+        
+        .forget-text {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .login-button {
+            width: 100%;
+            height: auto;
+            background-color: #001f3f;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 30px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            font-size: 16px;
+            margin-bottom: 44px;
+        }
+        
+        .login-button:hover {
+            background-color: #003366;
+        }
+        
+        .or-divider {
+            text-align: center;
+            position: relative;
+            margin-bottom: 15px;
+        }
+        
+        .or-text {
+            font-family: 'Inter', sans-serif;
+            font-weight: 400;
+            font-size: 12px;
+            color: white;
+            background-color: #f6f7ed;
+            padding: 0 10px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .google-button {
+            width: 100%;
+            height: 45px;
+            border: 1px solid #001f3f;
+            border-radius: 10px;
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+        
+        .google-button:hover {
+            background-color: rgba(0, 31, 63, 0.05);
+        }
+        
+        .google-icon {
+            width: 18px;
+            height: 18px;
+        }
+        
+        .google-text {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            color: black;
+            opacity: 0.8;
+            margin: 0;
+        }
+        
+        .signup-row {
+            text-align: center;
+        }
+        
+        .signup-text {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 600;
+            font-size: 12px;
+            color: black;
+        }
+        
+        .signup-link {
+            font-family: 'Nunito', sans-serif;
+            font-weight: 500;
+            font-size: 12px;
+            color: #001f3f;
+            text-decoration: none;
+            margin-left: 5px;
+        }
+        
+        .signup-link:hover {
+            text-decoration: underline;
+        }
+        
+        @media (max-width: 1200px) {
+            .login-container {
+                padding: 25px 50px;
+            }
+            
+            .image-panel {
+                left: 50px;
+                width: 400px;
+            }
+            
+            .form-panel {
+                right: 50px;
+                width: 450px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .image-panel {
+                display: none;
+            }
+            
+            .form-panel {
+                position: relative;
+                right: auto;
+                left: 50%;
+                transform: translateX(-50%);
+                margin-top: 50px;
+            }
+            
+            .portal-login-title {
+                margin-top: 0;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .login-container {
+                padding: 25px 20px;
+            }
+            
+            .form-panel {
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <!-- Left Image Panel -->
+        <div class="image-panel">
+            <div class="image-panel-bg">
+             <img src="images/Rectangle 50.png" alt="imagepanel" >
+            </div>
+            <div class="image-overlay"></div>
+            <div class="logo-container">
+                <img src="images/educator-book-and-laptop-in-form-of-a-lo_RJC9ZlgSSvSP1fHwtzhhfw_etmMTLOrS7i9Vn0BUXDNsA-removebg-preview 1.png" alt="logo">
+            </div>
+        </div>
+        
+        <!-- Right Form Panel -->
+        <div class="form-panel">
+            <h1 class="portal-login-title">Portal Login</h1>
+            
+            <form>
+                <!-- Username Input -->
+                <input type="text" class="form-input" placeholder="Username">
+                
+                <!-- Password Input -->
+                <input type="password" class="form-input password-input" placeholder="Password">
+                
+                <!-- Remember Me & Forget Password -->
+                <div class="remember-forget-row">
+                    <div class="remember-me">
+                        <input type="checkbox" id="rememberMe" class="remember-checkbox">
+                        <label for="rememberMe" class="remember-text">Remember me</label>
+                    </div>
+                    <a href="#" class="forget-text">Forget Password?</a>
+                </div>
+                
+                <!-- Login Button -->
+                <button type="submit" class="login-button">Login</button>
+                
+                
+                
+                <!-- Google Button -->
+                <button type="button" class="google-button">
+                    <svg class="google-icon" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.8249 7.23735H17.1V7.2H9V10.8H14.0864C13.3443 12.8956 11.3503 14.4 9 14.4C6.01785 14.4 3.6 11.9821 3.6 9C3.6 6.01785 6.01785 3.6 9 3.6C10.3765 3.6 11.6289 4.1193 12.5824 4.96755L15.1281 2.4219C13.5207 0.92385 11.3706 0 9 0C4.02975 0 0 4.02975 0 9C0 13.9702 4.02975 18 9 18C13.9702 18 18 13.9702 18 9C18 8.39655 17.9379 7.8075 17.8249 7.23735Z" fill="#FFC107"/>
+                        <path d="M1 4.82508L3.93798 7C4.73295 5.01328 6.65821 3.61057 8.91122 3.61057C10.2789 3.61057 11.5232 4.1314 12.4707 4.98214L15 2.42901C13.4029 0.926563 11.2666 0 8.91122 0C5.47649 0 2.49783 1.95738 1 4.82508Z" fill="#FF3D00"/>
+                        <path d="M8.98584 18C11.3029 18 13.4082 17.1321 15 15.7208L12.2237 13.4214C11.293 14.1146 10.1554 14.4894 8.98584 14.4881C6.65266 14.4881 4.67156 13.032 3.92523 11L1 13.2059C2.48459 16.0492 5.49952 18 8.98584 18Z" fill="#4CAF50"/>
+                        <path d="M17.8249 7.03967H17.1V7H9V10.824H14.0864C13.7314 11.8835 13.092 12.8093 12.2472 13.487L12.2485 13.4861L15.0341 15.9898C14.837 16.1801 18 13.6921 18 8.91202C18 8.27102 17.9379 7.64531 17.8249 7.03967Z" fill="#1976D2"/>
+                    </svg>
+                    <span class="google-text">Continue with Google</span>
+                </button>
+                
+                <!-- Sign Up Link -->
+                <div class="signup-row">
+                    <span class="signup-text">Don't Have An Account?</span>
+                    <a href="signup.html" class="signup-link">Sign Up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

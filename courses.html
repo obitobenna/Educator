@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Courses - Educator</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.0/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@400;500;600&family=Sora:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="courses.css">
+</head>
+<body>
+    
+    <!-- Hero Section -->
+    <section class="hero-section position-relative">
+        <div class="hero-image"></div>
+        <div class="hero-overlay"></div>
+        
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-white rounded-pill position-absolute mx-auto" style="top: 50px; left: 100px; right: 100px; max-width: 1240px; z-index: 10;">
+            <div class="container-fluid px-4 py-2">
+                <a class="navbar-brand" href="#">
+                    <img src="images/educator-book-and-laptop-in-form-of-a-lo_RJC9ZlgSSvSP1fHwtzhhfw_etmMTLOrS7i9Vn0BUXDNsA-removebg-preview 1.png" alt="Logo" height="44">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto me-3">
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="about.html">About</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="mentor.html">Mentors</a></li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="#">Blog</a></li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle fw-semibold" href="#" id="courseDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Course</a>
+                            <ul class="dropdown-menu" aria-labelledby="courseDropdown">
+                                <li><a class="dropdown-item" href="courses.html">All Courses</a></li>
+                                <li><a class="dropdown-item" href="#">IT & Software</a></li>
+                                <li><a class="dropdown-item" href="#">Business</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item"><a class="nav-link fw-semibold" href="contact.html">Contact</a></li>
+                    </ul>
+                    <div class="top-actions d-flex align-items-center gap-2 ms-auto">
+                        <img class="search-icon" src="images/search-icon.png" alt="search icon">
+                        <img class="net-icon" src="images/Vector.png" alt="net icon">
+                    </div>
+                    <a href="signup.html" class="custom-btn">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Content -->
+        <div class="container position-relative" style="padding-top: 234px; z-index: 5;">
+            <h1 class="hero-title text-white fw-bold mb-2"> <img src="images/Line 2 (3).png" alt=""> OUR COURSES</h1>
+            <p class="breadcrumb-text text-white mt-3">Home / <span class="text-primary">Courses</span></p>
+        </div>
+    </section>
+
+    <!-- Featured Courses Section -->
+    <section class="featured-courses-section py-5">
+        <div class="container">
+            <!-- Section Header -->
+            <div class="section-header text-center mb-3">
+                <h6 class="text-uppercase fw-medium mb-2  mentorship-text "><img src="images/Line 3.png" alt=""> OUR FEATURED COURSES <img src="images/Line 2 (2).png" alt=""></h6>
+                
+                <div class="decorative-circle"></div>
+            </div>
+            
+            <h2 class="text-center fw-bold mb-5" style="max-width: 590px; margin: 0 auto;">Learn, grow, and excel with courses crafted by experts for real-world success.</h2>
+            
+            <!-- Filter Buttons -->
+            <div class="filter-buttons d-flex justify-content-center gap-3 mb-5">
+                <button class="btn btn-filter active">All</button>
+                <button class="btn btn-filter">IT & Software</button>
+                <button class="btn btn-filter">Marketing</button>
+                <button class="btn btn-filter">Photography</button>
+                <button class="btn btn-filter">Business</button>
+            </div>
+            
+            <!-- Course Cards - First Row -->
+            <div class="row g-4 mb-4">
+                <!-- Course Card 1 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">IT & Software</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Java programming masterclass for software developers</h6>
+                            <p class="small text-muted mb-3">Master one of the world's most powerful and versatile programming languages.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">200,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 2 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Photography</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Workflow strategy from capture to output.</h6>
+                            <p class="small text-muted mb-3">We follow a simple driven design tailored training programs & provide guided mentorship.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">200,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 3 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Marketing</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Strategies to financial freedom</h6>
+                            <p class="small text-muted mb-3">We equip learners with digital skills, practical knowledge, and mentorship that go beyond the classroom.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">200,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Course Card 4 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Business</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Digital transformation for business leaders.</h6>
+                            <p class="small text-muted mb-3">Our programs equip you with digital skills, tools, and strategies to stay competitive.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">200,000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Course Cards - Second Row -->
+            <div class="row g-4">
+                <!-- Course Card 5 -->
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">IT & Software</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Java programming masterclass for software developers</h6>
+                            <p class="small text-muted mb-3">Master one of the world's most powerful and versatile programming languages.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">₦1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Photography</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Workflow strategy from capture to output.</h6>
+                            <p class="small text-muted mb-3">We follow a simple driven design tailored training programs & provide guided mentorship.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">₦1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Marketing</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Strategies to financial freedom</h6>
+                            <p class="small text-muted mb-3">We equip learners with digital skills, practical knowledge, and mentorship that go beyond the classroom.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">₦1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="course-card">
+                        <div class="course-image position-relative">
+                            <img src="images/choirs 2.png" alt="Course" class="img-fluid rounded-top">
+                            <div class="course-overlay"></div>
+                            <span class="badge bg-dark position-absolute">Business</span>
+                            <button class="btn-wishlist">
+                                <svg width="24" height="23" viewBox="0 0 24 23" fill="none">
+                                    <path d="M18.3978 10.2C18.3978 9.25534 18.0223 8.34932 17.354 7.68131C16.6857 7.01329 15.7793 6.63801 14.8341 6.63801C14.2199 6.63846 13.6161 6.79777 13.0817 7.10047C12.5472 7.40317 12.1002 7.83894 11.7841 8.36542C11.468 7.83887 11.0209 7.40305 10.4864 7.10035C9.95181 6.79765 9.34799 6.63837 8.73362 6.63801C7.78848 6.63801 6.88206 7.01329 6.21375 7.68131C5.54544 8.34932 5.16998 9.25534 5.16998 10.2C5.16998 10.65 5.2571 11.0784 5.40917 11.4745C6.58748 14.8624 11.7841 18.5799 11.7841 18.5799C11.7841 18.5799 16.9808 14.8624 18.1591 11.4745C18.317 11.0681 18.3976 10.636 18.3978 10.2Z" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="course-body p-3">
+                            <h6 class="fw-semibold mb-2">Digital transformation for business leaders.</h6>
+                            <p class="small text-muted mb-3">Our programs equip you with digital skills, tools, and strategies to stay competitive.</p>
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span class="small course-meta">
+                                    <svg width="14" height="12" class="me-1" fill="none">
+                                        <path d="M8 4C8.5 2.02625 10.3884 1.01844 14.5 1C14.5657 0.999756 14.6309 1.01252 14.6916 1.03756C14.7524 1.0626 14.8076 1.09942 14.8541 1.1459C14.9006 1.19238 14.9374 1.24759 14.9624 1.30837C14.9875 1.36914 15.0003 1.43427 15 1.5V10.5C15 10.6326 14.9473 10.7598 14.8536 10.8536C14.7598 10.9473 14.6326 11 14.5 11C10.5 11 8.95469 11.8066 8 13M8 4C7.5 2.02625 5.61157 1.01844 1.5 1C1.43427 0.999756 1.36914 1.01252 1.30837 1.03756C1.24759 1.0626 1.19238 1.09942 1.1459 1.1459C1.09942 1.19238 1.0626 1.24759 1.03756 1.30837C1.01252 1.36914 0.999756 1.43427 1 1.5V10.4397C1 10.7484 1.19125 11 1.5 11C5.5 11 7.05094 11.8125 8 13M8 4V13" stroke="black" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    5 Lessons
+                                </span>
+                                <span class="small course-meta">
+                                    <svg width="14" height="14" class="me-1" fill="black">
+                                        <path d="M7 5.99903C6.17533 5.99903 5.469 5.70503 4.881 5.11703C4.293 4.52903 3.99933 3.82303 4 2.99903C4.00067 2.17503 4.29433 1.46836 4.881 0.879028C5.46767 0.289694 6.174 -0.00330521 7 2.81215e-05C7.826 0.00336145 8.53233 0.296694 9.119 0.880028C9.70567 1.46336 9.99933 2.17003 10 3.00003C10.0007 3.83003 9.707 4.53603 9.119 5.11803C8.531 5.70003 7.82467 5.99303 7 5.99903ZM0 13.23V11.584C0 11.1714 0.12 10.7854 0.36 10.426C0.600667 10.066 0.924 9.78669 1.33 9.58803C2.274 9.13536 3.21867 8.79603 4.164 8.57003C5.10867 8.34336 6.054 8.23003 7 8.23003C7.946 8.23003 8.89167 8.34336 9.837 8.57003C10.7823 8.79669 11.7263 9.13603 12.669 9.58803C13.0757 9.78669 13.399 10.066 13.639 10.426C13.8797 10.7854 14 11.1714 14 11.584V13.23H0Z"/>
+                                    </svg>
+                                    3 Student
+                                </span>
+                            </div>
+                            <hr>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <div class="rating">
+                                    <span class="stars">★★★★</span>
+                                    <span class="small ms-1">4 (4)</span>
+                                </div>
+                                <span class="fw-semibold price">₦1000</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section-courses position-relative text-white py-5">
+        <div class="cta-overlay-courses"></div>
+        <div class="container position-relative" style="z-index: 2;">
+            <div class="row">
+                <div class="col-lg-8">
+                    <h2 class="fw-bold mb-3">Join Our Mentorship and ICT Training Program</h2>
+                    <p class="mb-4">Partner with educator for expert guidance, tailored solutions, and reliable ICT support.</p>
+                    <a href="portal.html" class="btn btn-success btn-lg px-4">Become a mentor →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Mentorship Program</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">Performance Marketing</li>
+                        <li class="mb-2">Digital Marketing</li>
+                        <li class="mb-2">UI / UX Designer</li>
+                        <li class="mb-2">Management Consulting</li>
+                        <li class="mb-2">Product Marketing</li>
+                        <li class="mb-2">Product Management</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Workshop</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">AI for Consultant</li>
+                        <li class="mb-2">Product Management</li>
+                        <li class="mb-2">Marketing Mastermind</li>
+                        <li class="mb-2">Business Mastermind</li>
+                        <li class="mb-2">Linkedin Growth</li>
+                        <li class="mb-2">ChatGPT</li>
+                    </ul>
+                </div>
+
+                <div class="col-md-4">
+                    <h5 class="fw-semibold text-white mb-4">Company</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2">About Us</li>
+                        <li class="mb-2">Contact Us</li>
+                        <li class="mb-2">Careers</li>
+                        <li class="mb-2">Become a Mentor</li>
+                        <li class="mb-2">Privacy Policy</li>
+                        <li class="mb-2">Help</li>
+                    </ul>
+                </div>
+            </div>
+
+            <hr class="my-4">
+
+            <!-- Centered social icons -->
+            <div class="social-links d-flex justify-content-center gap-2 mb-3">
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-facebook"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-linkedin"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-instagram"></i></a>
+                <a href="#" class="btn btn-light btn-sm rounded"><i class="bi bi-youtube"></i></a>
+            </div>
+
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <p class="mb-0 small">© 2025 Educator. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <span class="small me-3">Terms & Condition</span>
+                    <span class="text-white-50">|</span>
+                    <span class="small ms-3">Refund Policy</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

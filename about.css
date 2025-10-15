@@ -1,0 +1,483 @@
+/* About Page Styles */
+
+:root {
+    --primary-green: #00804c;
+    --dark-blue: #001f3f;
+    --light-bg: #f6f7ed;
+    --text-muted: #f6f7ed;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background-color: var(--light-bg);
+    color: #333;
+}
+
+/* Hero Section */
+.hero-section {
+    background: linear-gradient(rgba(51, 51, 51, 0.71), rgba(51, 51, 51, 0.71)), 
+                url('images/nav-image.png') center/cover;
+    min-height: 400px;
+    display: flex;
+    align-items: flex-end;
+    position: relative;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(51, 51, 51, 0.71);
+    z-index: 0; /* keep overlay beneath navbar/menu */
+}
+
+.hero-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+
+.breadcrumb-text {
+    font-size: 16px;
+    color: #f6f7ed;
+}
+
+
+
+/* Statistics Section */
+.stats-section {
+    position: relative;
+    margin-top: 50px;
+    z-index: 10;
+    margin-bottom: 80px;
+}
+
+.stats-card {
+    background-color: var(--primary-green) !important;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.stat-label {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.stat-value {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+/* Who We Are Section */
+.bg-dark-blue {
+    background-color: var(--dark-blue) !important;
+    background:radial-gradient(#b9bab557 1px, transparent 1px) 0 0/20px 20px;
+}
+
+.section-header h6 {
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.underline-white {
+    width: 44px;
+    height: 6px;
+    background: white;
+    border-radius: 3px;
+}
+
+.underline-green {
+    width: 44px;
+    height: 6px;
+    background: var(--primary-green);
+    border-radius: 3px;
+}
+
+.content-text {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 25px;
+}
+
+.feature-check {
+    flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Ensure inline SVG scales neatly inside the container */
+.feature-check svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+.features-list h6 {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.features-list p {
+    font-size: 14px;
+    line-height: 25px;
+}
+
+.since-badge-about {
+    position: absolute;
+    top: 100px;
+    right: 50px;
+    background: white;
+    padding: 30px 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    color: var(--dark-blue);
+    z-index: 10;
+}
+
+.since-badge-about p {
+    font-size: 50px;
+    line-height: 1;
+    margin-bottom: 5px;
+}
+
+.since-badge-about h2 {
+    font-size: 70px;
+    line-height: 1;
+}
+
+.image-wrapper {
+    position: relative;
+    padding: 50px;
+}
+
+.overlay-image {
+    position: absolute;
+    bottom: 50px;
+    left: 50px;
+    z-index: 5;
+}
+
+/* Ensure right-column visual scales on all screens */
+.who-we-are-section .col-lg-6.position-relative img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
+}
+
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+}
+
+/* Core Values Section */
+.core-values-section {
+    padding: 80px 0;
+}
+.core-values-section .row + .row {
+    margin-top: 60px;
+}
+
+.value-card {
+    background-color: var(--primary-green) !important;
+    border-radius: 5px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+    min-height: 400px;
+    position: relative;
+    padding: 60px 40px 40px !important;
+}
+
+.value-icon {
+    position: absolute;
+    top: -31.5px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.value-card h5 {
+    font-size: 24px;
+    font-weight: 600;
+}
+
+.value-card p {
+    font-size: 16px;
+    line-height: 25px;
+}
+
+/* CTA Section */
+.cta-section-about {
+    background: linear-gradient(rgba(69, 66, 66, 0.57), rgba(0, 0, 0, 0.57)),
+                url('images/Rectangle\ 10\ \(1\).png') center/cover;
+    position: relative;
+    padding: 80px 0;
+    margin-bottom: 40px; /* add breathing room before footer */
+}
+
+.cta-overlay-about {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.57);
+}
+
+.cta-section-about h2 {
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.cta-section-about p {
+    font-size: 16px;
+}
+
+/* Footer */
+.footer-about {
+    background-color: var(--dark-blue) !important;
+}
+
+.footer-about h5 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.footer-list {
+    font-size: 16px;
+}
+
+.footer-list li {
+    display: flex;
+    align-items: center;
+}
+
+.social-links a {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Buttons */
+.btn-success {
+    background-color: var(--primary-green) !important;
+    border-color: var(--primary-green) !important;
+    border-radius: 5px;
+}
+
+.btn-success:hover {
+    background-color: #006a3f !important;
+    border-color: #006a3f !important;
+}
+
+.btn-dark {
+    background-color: var(--dark-blue) !important;
+    border-color: var(--dark-blue) !important;
+    border-radius: 5px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero-section {
+        min-height: 300px;
+    }
+    
+    .navbar {
+        left: 20px !important;
+        right: 20px !important;
+        top: 30px !important;
+        position: relative;
+        z-index: 1050 !important; /* ensure navbar sits above stats/content */
+    }
+    
+    .stats-section {
+        margin-top: 24px; /* create separation from hero */
+        padding-top: 8px;
+    }
+    
+    .since-badge-about {
+        position: relative;
+        top: 0;
+        right: 0;
+        margin: 20px auto;
+        width: fit-content;
+    }
+    
+    .image-wrapper {
+        padding: 20px;
+    }
+    
+    .overlay-image {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 20px;
+    }
+    /* Add breathing room before core values on tablets */
+    .core-values-section { margin-top: 20px; }
+    
+    .who-we-are-section .ps-lg-5 {
+        padding-left: 1rem !important;
+    }
+    
+    .cta-section-about { margin-bottom: 32px; }
+    .cta-section-about h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width: 576px) {
+    /* Extra-small phones: increase spacing and breathing room */
+    .stats-section { margin-top: 28px; }
+    .stats-card { padding: 1.25rem !important; }
+    .stats-card .row { row-gap: 1rem; }
+
+    /* Extra-small: keep About feature icons tidy */
+    .who-we-are-section .features-list .feature-check { width: 24px; height: 24px; }
+    .who-we-are-section .features-list .feature-item { align-items: center !important; }
+}
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 20px;
+    }
+    
+    .breadcrumb-text {
+        font-size: 14px;
+    }
+    
+    .stat-label {
+        font-size: 16px;
+    }
+    
+    .stat-value {
+        font-size: 24px;
+    }
+    
+    .section-header h6 {
+        font-size: 20px;
+    }
+    
+    .who-we-are-section h2 {
+        font-size: 24px !important;
+    }
+    
+    .content-text {
+        font-size: 14px;
+    }
+    
+    .features-list h6 {
+        font-size: 14px;
+    }
+    
+    .features-list p {
+        font-size: 12px;
+    }
+    /* Tablet: normalize About feature icon sizing and alignment */
+    .who-we-are-section .features-list .feature-check { width: 26px; height: 26px; }
+    .who-we-are-section .features-list .feature-item { align-items: center !important; }
+    /* Core Values: add comfortable gaps when cards stack on mobile */
+    .core-values-section .row.g-4 { row-gap: 2rem !important; }
+    .core-values-section .value-card { margin-bottom: 24px; }
+    .core-values-section .value-icon { top: -26px; }
+    /* Mobile spacing and alignment for the image block */
+    .who-we-are-section .col-lg-6.position-relative { padding: 0 16px; }
+    .core-values-section { margin-top: 24px; }
+    
+    .core-values-section h2 {
+        font-size: 24px !important;
+    }
+    
+    .core-values-section .row + .row {
+        margin-top: 40px;
+    }
+    
+    .value-card {
+        min-height: 350px;
+        padding: 50px 20px 30px !important;
+    }
+    
+    .value-card h5 {
+        font-size: 20px;
+    }
+    
+    .value-card p {
+        font-size: 14px;
+    }
+    
+    .cta-section-about { margin-bottom: 28px; }
+    .cta-section-about h2 {
+        font-size: 24px;
+    }
+    
+    .cta-section-about p {
+        font-size: 14px;
+    }
+    
+    .footer-about h5 {
+        font-size: 18px;
+    }
+    
+    .footer-list {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 576px) {
+    .cta-section-about { margin-bottom: 28px; }
+    .since-badge-about p {
+        font-size: 40px;
+    }
+    
+    .since-badge-about h2 {
+        font-size: 50px;
+    }
+    
+    .stats-card {
+        padding: 2rem 1rem !important;
+    }
+    .value-card {
+        min-height: 300px;
+        padding: 40px 16px !important;
+    }
+    /* Extra-small phones: slightly larger gaps and icon offset */
+    .core-values-section .row.g-4 { row-gap: 2.4rem !important; }
+    .core-values-section .value-card { margin-bottom: 28px; }
+    .core-values-section .value-icon { top: -22px; }
+    .value-card h5 { font-size: 18px; }
+    .value-card p { font-size: 13px; }
+    .cta-section-about h2 { font-size: 22px; }
+    .cta-section-about p { font-size: 13px; }
+}
+
+/* Utilities */
+.text-primary {
+    color: #1976d2 !important;
+}
+
+.text-white-50 {
+    color: rgba(255, 255, 255, 0.5) !important;
+}
+
+.rounded-3 {
+    border-radius: 15px !important;
+}
+
+.shadow {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
