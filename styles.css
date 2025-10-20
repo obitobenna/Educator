@@ -49,6 +49,8 @@ body {
   background: #001f3f;
   color: #fff;
   text-decoration: none;
+  text-align: center;
+  align-items: center;
 }
 
 /* Hero Section */
@@ -1161,7 +1163,7 @@ body {
 
 @media (max-width: 576px) {
   .top-actions { display: none !important; }
-  .custom-btn { padding: 8px 16px; font-size: 14px; }
+  .custom-btn { padding: 8px 16px; font-size: 14px;margin-top: 20px; }
   .navbar-brand img { height: 36px; }
   .hero-content { padding-top: 120px; }
 }
