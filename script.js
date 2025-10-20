@@ -122,4 +122,75 @@ document.addEventListener('DOMContentLoaded', () => {
     updateCountdown();
     setInterval(updateCountdown, 1000);
   }
+
+  // === Navbar Search Toggle ===
+  const searchIcons = document.querySelectorAll('.top-actions .search-icon');
+  const inline = document.getElementById('navbarInlineSearch');
+  if (searchIcons.length) {
+    let popover = document.querySelector('.navbar-search-popover');
+    if (!popover) {
+      popover = document.createElement('div');
+      popover.className = 'navbar-search-popover';
+      popover.innerHTML = `
+        <div class="input-group">
+          <input type="text" class="form-control navbar-search-input" placeholder="Search..." aria-label="Search">
+          <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+        </div>
+      `;
+      document.body.appendChild(popover);
+    }
+
+    function positionPopover(icon) {
+      const rect = icon.getBoundingClientRect();
+      const top = window.scrollY + rect.bottom + 8;
+      const left = window.scrollX + rect.left - (popover.offsetWidth - rect.width) / 2;
+      popover.style.top = `${top}px`;
+      popover.style.left = `${left}px`;
+    }
+
+    function toggleInline() {
+      if (!inline) return;
+      inline.classList.toggle('d-none');
+      if (!inline.classList.contains('d-none')) {
+        const input = inline.querySelector('input');
+        input && input.focus();
+      }
+    }
+
+    searchIcons.forEach(icon => {
+      icon.style.cursor = 'pointer';
+      icon.addEventListener('click', (e) => {
+        e.preventDefault();
+        // On small screens where .top-actions is hidden, fall back to inline container if present
+        const topActionsVisible = window.getComputedStyle(document.querySelector('.top-actions')).display !== 'none';
+        if (window.innerWidth <= 576 && inline) {
+          toggleInline();
+          return;
+        }
+        positionPopover(icon);
+        popover.classList.toggle('show');
+        if (popover.classList.contains('show')) {
+          const input = popover.querySelector('.navbar-search-input');
+          input.focus();
+        }
+      });
+    });
+
+    document.addEventListener('click', (e) => {
+      const clickedIcon = Array.from(searchIcons).some(ic => ic.contains(e.target));
+      if (!clickedIcon && !popover.contains(e.target)) {
+        popover.classList.remove('show');
+      }
+      if (inline && !clickedIcon && !inline.contains(e.target)) {
+        inline.classList.add('d-none');
+      }
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        popover.classList.remove('show');
+        inline && inline.classList.add('d-none');
+      }
+    });
+  }
 });

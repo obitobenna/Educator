@@ -50,97 +50,6 @@
             background-color: rgba(51, 51, 51, 0.71);
         }
         
-        .navbar-custom {
-            background-color: white;
-            border-radius: 30px;
-            padding: 20px 40px;
-            margin: 50px 100px 0;
-            position: relative;
-            z-index: 10;
-        }
-        
-        .navbar-logo {
-            width: 64px;
-            height: 44px;
-        }
-        
-        .navbar-custom .nav-link {
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 600;
-            font-size: 16px;
-            color: rgba(0, 0, 0, 0.7);
-            margin: 0 15px;
-        }
-        
-        .navbar-icons {
-            display: flex;
-            gap: 20px;
-            align-items: center;
-        }
-        
-        .search-icon, .user-icon {
-            color: rgba(0, 0, 0, 0.5);
-            font-size: 18px;
-        }
-        
-        .signup-btn {
-            background-color: #001f3f;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 30px;
-            font-family: 'Poppins', sans-serif;
-            font-weight: 500;
-            font-size: 16px;
-        }
-        
-        .signup-btn:hover {
-            background-color: #003366;
-        }
-        
-        .breadcrumb-section {
-            position: absolute;
-            bottom: 80px;
-            left: 135px;
-            z-index: 10;
-        }
-        
-        .portal-heading {
-            position: absolute;
-            bottom: 120px;
-            left: 100px;
-            color: white;
-            font-weight: 700;
-            font-size: 24px;
-            z-index: 10;
-        }
-        
-        .portal-heading::before {
-            content: '';
-            position: absolute;
-            left: 0;
-            bottom: -10px;
-            width: 25px;
-            height: 2px;
-            background-color: white;
-        }
-        
-        .breadcrumb-custom {
-            background: transparent;
-            margin: 0;
-            padding: 0;
-            font-size: 16px;
-        }
-        
-        .breadcrumb-custom .breadcrumb-item {
-            color: #f6f7ed;
-        }
-        
-        .breadcrumb-custom .breadcrumb-item.active {
-            color: #1976d2;
-            font-weight: 500;
-        }
-        
         /* Main Content */
         .main-content {
             max-width: 1240px;
@@ -157,17 +66,7 @@
             display: inline-block;
         }
         
-        .section-title::after {
-            content: '';
-            position: absolute;
-            right: -50px;
-            top: 50%;
-            transform: translateY(-50%);
-            width: 44px;
-            height: 2px;
-            background-color: black;
-        }
-        
+       
         .main-heading {
             font-size: 30px;
             font-weight: 600;
@@ -196,6 +95,18 @@
             font-size: 16px;
             color: rgba(51, 51, 51, 0.5);
             font-family: 'Montserrat', sans-serif;
+        }
+        
+        /* Custom chevron for selects to match design */
+        .form-select {
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23000000' d='M0 0l5 6 5-6z'/%3E%3C/svg%3E");
+            background-repeat: no-repeat;
+            background-position: right 14px center;
+            background-size: 10px 6px;
+            padding-right: 36px;
         }
         
         .form-control:focus, .form-select:focus {
@@ -244,6 +155,12 @@
             line-height: 1.5;
         }
         
+        .checkbox-label a {
+            color: #1976d2;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        
         .recaptcha-container {
             background-color: white;
             border-radius: 5px;
@@ -272,72 +189,134 @@
             background-color: #003366;
         }
         
-        /* Responsive */
-        @media (max-width: 992px) {
-            .navbar-custom {
-                margin: 0 !important;
-                padding: 12px 16px;
-                width: 100% !important;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section { height: 320px; }
-            .portal-heading { left: 20px; bottom: 90px; font-size: 20px; }
-            .breadcrumb-section { left: 20px; bottom: 60px; }
-            .main-content { padding: 0 20px; }
-            .navbar-icons { display: none; }
-            .signup-btn { padding: 8px 16px; font-size: 14px; }
-            .submit-btn { width: 100%; }
-        }
 
-        @media (max-width: 576px) {
-            .hero-section { height: 280px; }
-            .portal-heading { font-size: 18px; }
-            .breadcrumb-custom { font-size: 14px; }
-        }
+.section-heading span {
+    color: rgba(0, 0, 0, 0.4);
+}
+
+.checkbox-container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.checkbox-container input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin-top: 2px;
+}
+
+.checkbox-label {
+    font-size: 14px;
+    color: black;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.recaptcha-container {
+    background-color: white;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 0px 10px 40px 0px rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+    align-items: center;
+    gap: 29px;
+    margin-bottom: 30px;
+}
+
+.submit-btn {
+    width: 595px;
+    background-color: #001f3f;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.submit-btn:hover {
+    background-color: #003366;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .navbar-custom {
+        margin: 0 !important;
+        padding: 12px 16px;
+        width: 100% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section { height: 320px; }
+    .portal-heading { left: 20px; bottom: 90px; font-size: 20px; }
+    .breadcrumb-section { left: 20px; bottom: 60px; }
+    .main-content { padding: 0 20px; }
+    .navbar-icons { display: none; }
+    .signup-btn { padding: 8px 16px; font-size: 14px; }
+    .submit-btn { width: 100%; }
+}
+
+@media (max-width: 576px) {
+    .hero-section { height: 280px; }
+    .portal-heading { font-size: 18px; }
+    .breadcrumb-custom { font-size: 14px; }
+}
+
+/* Footer styles are inherited from About page / Bootstrap */
+
+@media (max-width: 1200px) {
+    .navbar-custom {
+        margin: 30px 50px 0;
+    }
+    
+    .main-content, .footer-content {
+        padding: 0 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-custom {
+        margin: 0 !important;
+        width: 100% !important;
+    }
+    
+    .main-content, .footer-content {
+        padding: 0 20px;
+    }
+    
+    .submit-btn {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .hero-section {
+        height: 300px;
+    }
+    
+    .portal-heading {
+        font-size: 20px;
+        left: 20px;
+    }
+    
+    .breadcrumb-section {
+        left: 20px;
+    }
+}
+
+
         
-        /* Footer styles are inherited from About page / Bootstrap */
-        
-        @media (max-width: 1200px) {
-            .navbar-custom {
-                margin: 30px 50px 0;
-            }
-            
-            .main-content, .footer-content {
-                padding: 0 50px;
-            }
-        }
-        
-        @media (max-width: 992px) {
-            .navbar-custom {
-                margin: 0 !important;
-                width: 100% !important;
-            }
-            
-            .main-content, .footer-content {
-                padding: 0 20px;
-            }
-            
-            .submit-btn {
-                width: 100%;
-            }
-        }
-        
-        @media (max-width: 768px) {
-            .hero-section {
-                height: 300px;
-            }
-            
-            .portal-heading {
-                font-size: 20px;
-                left: 20px;
-            }
-            
-            .breadcrumb-section {
-                left: 20px;
-            }
-        }
+        /* duplicate responsive block removed */
     </style>
 </head>
 <body>
@@ -373,6 +352,13 @@
                     <div class="top-actions d-flex align-items-center gap-2 ms-auto">
                         <img class="search-icon" src="images/search-icon.png" alt="search icon">
                         <img class="net-icon" src="images/Vector.png" alt="net icon">
+                        <!-- Inline hidden search input (fallback) -->
+                        <div class="ms-3 d-none" id="navbarInlineSearch">
+                            <div class="input-group input-group-sm">
+                                <input type="text" class="form-control" placeholder="Search..." aria-label="Search">
+                                <button class="btn btn-outline-secondary" type="button"><i class="bi bi-search"></i></button>
+                            </div>
+                        </div>
                     </div>
                     <a href="signup.html" class="custom-btn">Sign Up</a>
                 </div>
@@ -388,7 +374,7 @@
     
     <!-- Main Content -->
     <div class="main-content">
-        <div class="section-title">TRAINEE / MENTEE PORTAL</div>
+        <div class="section-title">TRAINEE / MENTEE PORTAL <img src="images/Line 2.png" alt=""></div>
         <h1 class="main-heading">Your Gateway to Learning, Growth and Mentorship.</h1>
         
         <!-- Form -->
@@ -531,7 +517,7 @@
             <div class="checkbox-container">
                 <input type="checkbox" id="terms">
                 <label class="checkbox-label" for="terms">
-                    By clicking this box, I confirm that I have read, understood, and agree to be bound by the <strong>Terms & Condition</strong> and Privacy Policy of this service
+                    By clicking this box, I confirm that I have read, understood, and agree to be bound by the <a href="#">Terms &amp; Condition</a> and <a href="#">Privacy Policy</a> of this service
                 </label>
             </div>
             
@@ -613,7 +599,8 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS Bundle -->
+    <!-- Scripts -->
+    <script src="script.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
 </body>
 </html>

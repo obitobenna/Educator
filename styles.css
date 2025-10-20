@@ -167,6 +167,24 @@ body {
     height: 18px;
 }
 
+/* Floating navbar search popover */
+.navbar-search-popover {
+  position: fixed;
+  background: #fff;
+  border: 1px solid rgba(0,0,0,0.1);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  border-radius: 12px;
+  padding: 10px;
+  z-index: 2000;
+  width: 280px;
+  display: none;
+}
+.navbar-search-popover.show { display: block; }
+.navbar-search-popover .navbar-search-input { width: 100%; }
+
+@media (max-width: 576px) {
+  .navbar-search-popover { left: 50% !important; transform: translateX(-50%); width: 88%; top: 90px !important; }
+}
 
 /* Section Headers */
 .section-header h6 {
@@ -376,6 +394,8 @@ body {
 }
 
 /* Why Learn card layout to match reference */
+
+
 .why-learn .card {
     position: relative;
     overflow: visible; /* allow badge to sit outside */
@@ -411,6 +431,10 @@ body {
 }
 
 /* Course Cards */
+
+.featured-courses{
+     background: radial-gradient(#e5e8d5 1px, transparent 1px) 0 0/20px 20px;
+}
 .feature-text {
   display: inline-flex;
   align-items: center;
@@ -665,7 +689,10 @@ body {
 
 .blog{
     margin-bottom: 30px;
+    background:
+      radial-gradient(#e5e8d5 1px, transparent 1px) 0 0/20px 20px;
 }
+
 
 .blog-date {
     position: absolute;
