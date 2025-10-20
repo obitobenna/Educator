@@ -814,10 +814,11 @@ body {
     position: absolute;
     left: 0;
     top: 8px;
-    width: 10px;
-    height: 10px;
-    background: var(--primary-green);
-    border-radius: 2px;
+    width: 12px;
+    height: 15px;
+    background-image: url('images/Vector (15).png');
+    background-size: contain;
+    background-repeat: no-repeat;
 }
 
 /* Centered social buttons style */
@@ -1178,6 +1179,17 @@ body {
 }
 @media (max-width: 576px) {
   .who-persona-row { gap: 20px; }
+}
+
+/* Mentor social links */
+.mentor-info .social-links a {
+    background-color: white !important;
+    color: var(--primary-green) !important;
+}
+
+.mentor-info .social-links a:hover {
+    background-color: var(--primary-green) !important;
+    color: white !important;
 }
 
 
