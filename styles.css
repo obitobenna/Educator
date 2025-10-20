@@ -52,7 +52,9 @@ body {
   text-align: center;
   align-items: center;
 }
-
+.custom-btn:hover{
+    background-color: #333333;
+}
 /* Hero Section */
 .hero-section {
     background: linear-gradient(rgba(51, 51, 51, 0.71), rgba(51, 51, 51, 0.71)), 
@@ -100,8 +102,6 @@ body {
 @media (max-width: 576px) {
   .navbar.position-absolute { top: 12px !important; }
 }
-
-/* Navbar styles moved above to match HTML order */
 
 /* Carousel Dots */
 .carousel-dots {
@@ -250,6 +250,27 @@ body {
     margin-right: 0;
 }
 
+/* Hover effects for service cards */
+.service-card:hover {
+    background: white;
+    color: black;
+}
+
+.service-card:hover .service-icon {
+    background: var(--primary-green);
+}
+
+.service-card:hover h5,
+.service-card:hover p {
+    color: black !important;
+}
+
+.service-card:hover .btn-light {
+    background:  #001f3f;
+    color: #fff !important;
+
+}
+
 /* What We Do section background + tag */
 .what-we-do {
     background:
@@ -262,7 +283,7 @@ body {
     background-color: var(--primary-green) !important;
     background:radial-gradient(#b9bab58e 1px, transparent 1px) 0 0/20px 20px;
 }
-
+ 
 
 .feature-icon {
     width: 30px;
@@ -303,7 +324,7 @@ body {
     margin: 0;
 }
 
-/* === Learners Worldwide Section (moved here to follow HTML flow) === */
+/*  Learners Worldwide Section*/
 .learners-section {
   background: radial-gradient(#e5e8d5 1px, transparent 1px) 0 0/20px 20px;
 }
@@ -545,6 +566,17 @@ body {
     bottom: 0;
     background: rgba(0, 0, 0, 0.57);
 }
+.become-a-mentor-btn:hover{
+    background: #fff !important;
+    color: #00804c !important;
+
+}
+
+.btn-view-more:hover{
+    background: #fff !important;
+    color: #00804c !important;
+
+}
 
 /* Team Cards */
 .team-card {
@@ -763,6 +795,12 @@ body {
 }
 
 /* Accordion */
+.contact-btn:hover{
+    background-color: none !important;
+
+}
+ 
+
 .accordion-button {
     background: white;
     color: #000;
@@ -1181,6 +1219,13 @@ body {
   .who-persona-row { gap: 20px; }
 }
 
+/* Discover more button hover */
+.discover-more-btn:hover {
+    background-color: transparent !important;
+    border: 1px solid white !important;
+    color: white !important;
+}
+
 /* Mentor social links */
 .mentor-info .social-links a {
     background-color: white !important;
@@ -1190,6 +1235,13 @@ body {
 .mentor-info .social-links a:hover {
     background-color: var(--primary-green) !important;
     color: white !important;
+}
+
+/* Apply as mentor button hover */
+.mentor1:hover {
+    background-color:#333333 !important;
+    color: white !important;
+
 }
 
 
