@@ -81,9 +81,8 @@ body {
     padding: 50px 20px;
 }
 
-/* === Mobile: Full-width navbar across all pages === */
+
 @media (max-width: 992px) {
-  /* Override inline positioning on hero navbars */
   .navbar.position-absolute {
     left: 0 !important;
     right: 0 !important;
@@ -91,7 +90,7 @@ body {
     width: 100% !important;
     max-width: none !important;
     margin: 0 !important;
-    z-index: 1050 !important; /* outrank inline z-index and sections */
+    z-index: 1050 !important; 
   }
   /* Keep subtle rounding while spanning full width */
   .navbar.rounded-pill { border-radius: 16px !important; }
